@@ -1,9 +1,6 @@
 class Player
 
   def play_turn(warrior)
-    # Look ahead.
-    # If first person is a Captive, check if you can free or move forward
-    # If been attacked, retreat
     if warrior.feel.wall?
       warrior.pivot!
     elsif taking_damage?(warrior) and warrior.health < 11
